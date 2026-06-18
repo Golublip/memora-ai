@@ -768,3 +768,60 @@ h3 {
   display: flex;
   gap: 8px;
 }
+
+/* Biometric Lock Overlay */
+.biometric-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 6, 10, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: all 0.5s ease;
+}
+
+.biometric-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.1);
+}
+
+.lock-panel {
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  padding: 40px 30px;
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+}
+
+.lock-panel h2 {
+  font-size: 20px;
+  letter-spacing: 2.0px;
+  margin: 20px 0 10px 0;
+  color: var(--color-text-primary);
+}
+
+.lock-panel p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 30px;
+}
+
+.fingerprint-icon {
+  font-size: 64px;
+  animation: fingerPrintPulse 1.5s infinite ease-in-out;
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes fingerPrintPulse {
+  0%, 100% { transform: scale(1.0); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.7; }
+}
+

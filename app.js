@@ -656,3 +656,44 @@ toastYes.addEventListener('click', () => {
 toastNo.addEventListener('click', () => {
   captureToast.classList.add('hidden');
 });
+
+// Biometric Unlock Overlay
+const biometricOverlay = document.getElementById('biometric-lock-overlay');
+const btnUnlockBiometric = document.getElementById('btn-unlock-biometric');
+
+btnUnlockBiometric.addEventListener('click', () => {
+  setOrbState('processing');
+  orbStatus.innerText = 'DECRYPTING VAULT...';
+  
+  setTimeout(() => {
+    biometricOverlay.classList.add('hidden');
+    setOrbState('idle');
+    appendMessage("Vault decrypted successfully using on-device biometric keys (Fingerprint verified). Welcome back.", "ai");
+  }, 1200);
+});
+
+// P2P Local Network Syncing Simulation
+const p2pStatus = document.getElementById('p2p-status');
+p2pStatus.style.cursor = 'pointer';
+
+p2pStatus.addEventListener('click', () => {
+  if (p2pStatus.dataset.syncing === 'true') return;
+  
+  p2pStatus.dataset.syncing = 'true';
+  p2pStatus.className = 'value text-purple';
+  p2pStatus.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> SYNCING`;
+  
+  appendMessage("Local P2P Sync initiated. Broadcasting discovery ping on port 48290...", "ai");
+  
+  setTimeout(() => {
+    appendMessage("Peer found at 192.168.1.84. Exchanging public keys & trusted fingerprints...", "ai");
+  }, 1200);
+
+  setTimeout(() => {
+    p2pStatus.className = 'value text-cyan';
+    p2pStatus.innerHTML = `<i class="fa-solid fa-tower-broadcast"></i> LISTEN`;
+    p2pStatus.dataset.syncing = 'false';
+    appendMessage("Sync complete. 2 new nodes downloaded. Integrity hashes validated.", "ai");
+  }, 3200);
+});
+

@@ -100,8 +100,12 @@
             <span class="value text-purple"><i class="fa-solid fa-key"></i> ON-DEVICE</span>
           </div>
           <div class="stat-item">
-            <span class="label">TRUSTED DEVICE</span>
-            <span class="value"><i class="fa-solid fa-laptop-medical"></i> DETECTED</span>
+            <span class="label">BIOMETRICS</span>
+            <span class="value text-green"><i class="fa-solid fa-fingerprint"></i> ACTIVE</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">P2P LOCAL SYNC</span>
+            <span id="p2p-status" class="value text-cyan"><i class="fa-solid fa-tower-broadcast"></i> LISTEN</span>
           </div>
         </div>
 
@@ -189,6 +193,16 @@
         </div>
       </section>
     </aside>
+  </div>
+
+  <!-- Biometric Decryption Overlay -->
+  <div id="biometric-lock-overlay" class="biometric-overlay">
+    <div class="lock-panel hud-panel">
+      <i class="fa-solid fa-fingerprint fingerprint-icon text-green"></i>
+      <h2>VAULT ENCRYPTED</h2>
+      <p>Verify biometric identity to decrypt on-device memories (Zero-Knowledge).</p>
+      <button id="btn-unlock-biometric" class="btn btn-cyan">VERIFY IDENTITY</button>
+    </div>
   </div>
 
   <script src="app.js"></script>
