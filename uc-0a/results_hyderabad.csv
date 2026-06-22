@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"Underpass flooded after rain, causing ambulance diversion and risking lives.",
+GH-202402,Drain Blockage,Standard,Market area is flooded due to completely blocked drains.,NEEDS_REVIEW
+GH-202406,Drain Blockage,Standard,Main stormwater drain is 100% blocked with construction debris.,
+GH-202407,Drain Blockage,Standard,"Drain is blocked, causing mosquito breeding and dengue concerns.",
+GH-202410,Pothole,Standard,Potholes are forcing vehicles to slow to 20kmph on a fast road.,
+GH-202411,Pothole,Urgent,"A pothole swallowed a motorcycle wheel, resulting in the rider being hospitalised.",
+GH-202412,Pothole,Urgent,A school bus is struggling to navigate multiple potholes.,
+GH-202417,Waste,Standard,Garbage overflow in a heritage zone is being photographed by tourists.,NEEDS_REVIEW
+GH-202420,Noise,Standard,Construction drilling starting at 5am daily causes noise near residential towers.,
+GH-202422,Road Damage,Urgent,A partial road collapse has created a 1m deep crater near a residential gate.,
+GH-202424,Flooding,Standard,"The underpass floods during light rain, leading to abandoned cars.",
+GH-202428,Waste,Standard,"Post-market waste has not been cleared, leaving the area unusable.",
+GH-202432,Noise,Standard,"Delivery trucks are idling their engines, causing noise.",NEEDS_REVIEW
+GH-202448,Drain Blockage,Standard,A blocked main drain puts the entire locality at flooding risk.,NEEDS_REVIEW
+GH-202438,Flooding,Standard,"Fields channel rainwater through the colony's main road, causing flooding.",NEEDS_REVIEW
